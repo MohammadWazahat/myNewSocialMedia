@@ -1,6 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { IoHomeOutline } from "react-icons/io5";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { BiCategory } from "react-icons/bi";
+import { IoSearch } from "react-icons/io5";
 
 const Navbar = () => {
   return (
@@ -8,43 +12,55 @@ const Navbar = () => {
       <div>
         <section>
           <header>
-            <div className="flex flex-col m-4 p-4 justify-around items-center ">
-              <div className=" m-4 text-4xl font-bold">
-                <span className="alphaColor">J</span>INGLE
-                <span className="alphaColor"> R</span>OOM
+            <div className="  flex  justify-around items-center p-2">
+              <div className=" text-2xl font-bold">
+                <span className="text-green-400 text-3xl font-medium">J</span>INGLE
+                <span className="text-green-400 text-3xl ml-3">R</span>OOM
               </div>
-              <div className=" flex m-4 text-xl">
-                <ul className="flex flex-col  gap-6">
-                  <li className="navlink ">
-                    <NavLink to="/" className="clickLink">
-                      Home
+              <div className="flex item-center justify-center ">
+                <ul className="flex gap-6 ">
+                  <li className="">
+                    <NavLink to="/" className="">
+                      <IoHomeOutline
+                        color="rgb(0, 68, 254)"
+                        className=" h-8 w-8 "
+                      />
                     </NavLink>
                   </li>
-                  <li className="navlink">
-                    <NavLink to="/about" className="clickLink">
-                      About
+                  <li className="">
+                    <NavLink to="/mySavedPosts" className="">
+                      <BiCategory
+                        color="rgb(0, 68, 254)"
+                        className="h-8 w-8 "
+                      />
                     </NavLink>
                   </li>
-                  <li className="navlink">
-                    <NavLink to="/myProfile" className="clickLink">
-                      My Profile
+                  <li className="">
+                    <NavLink  to="/searchUsers"  className="">
+                      <div className="flex">
+                        <div>
+                          <IoSearch
+                            color="rgb(0, 68, 254)"
+                            className="h-8 w-8 "
+                          />
+                        </div>
+                      </div>
                     </NavLink>
                   </li>
-                  <li className="navlink">
-                    <NavLink to="/searchUsers" className="clickLink">
-                      Search users
-                    </NavLink>
-                  </li>
-                  <li className="navlink">
-                    <NavLink to="/mySavedPosts" className="clickLink">
-                      Saved Posts
+                  <li className="">
+                    <NavLink to="/myProfile" className="">
+                      <MdOutlineAccountCircle
+                        color="rgb(0, 68, 254)"
+                        className="h-8 w-8 "
+                      />
                     </NavLink>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="horizonLineBox">
-              <hr className="horizon boder border-slate-800 mx-4" />
+
+            <div >
+              <hr className="horizon border border-slate-100 " />
             </div>
           </header>
         </section>
