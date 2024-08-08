@@ -1,0 +1,6 @@
+npm i json-server
+
+create jsonfile 
+    copy path
+
+json-server --watch filepath --port 8005
